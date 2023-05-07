@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
+import RandomNumber from './RandomNumber';
 
 export class Game extends Component {
   randomNumbers = Array.from({length: this.props.randomNumberCount}).map(
@@ -17,10 +18,7 @@ export class Game extends Component {
         <Text style={styles.target}> {this.target} </Text>
         <View style={styles.options}>
           {this.randomNumbers.map((randomNumber, index) => (
-            <Text key={index} style={styles.option}>
-              {' '}
-              {randomNumber}{' '}
-            </Text>
+            <RandomNumber key={index} number={randomNumber} />
           ))}
         </View>
       </View>
