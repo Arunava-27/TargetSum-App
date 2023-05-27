@@ -7,7 +7,7 @@ export class App extends Component {
     return (
       <ScrollView>
         <View style={styles.container}>
-        <Game randomNumberCount={6} />
+        <Game randomNumberCount={6} initailSeconds={10} />
         </View>
       </ScrollView>
     );
